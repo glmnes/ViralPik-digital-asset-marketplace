@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+/* Custom properties */
+:root {
+  --background: #0a0a0a;
+  --foreground: #fafafa;
+  --card-bg: #141414;
+  --card-hover: #1a1a1a;
+  --border-color: #262626;
+  --accent: #3b82f6; /* Blue as accent */
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Masonry Grid Styles */
+.masonry-grid {
+  display: flex;
+  margin-left: -16px;
+  width: auto;
+}
+
+/* Shimmer animation for skeletons */
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.masonry-grid-column {
+  padding-left: 16px;
+  background-clip: padding-box;
+}
+
+.masonry-grid-column > div {
+  margin-bottom: 16px;
+}
+
+/* Hide scrollbar for navigation */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

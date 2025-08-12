@@ -1,0 +1,76 @@
+/* Custom Blue Theme for ViralPik */
+
+:root {
+  /* Blue color palette */
+  --ViralPik-blue-50: #eff6ff;
+  --ViralPik-blue-100: #dbeafe;
+  --ViralPik-blue-200: #bfdbfe;
+  --ViralPik-blue-300: #93c5fd;
+  --ViralPik-blue-400: #60a5fa;
+  --ViralPik-blue-500: #3b82f6;
+  --ViralPik-blue-600: #2563eb;
+  --ViralPik-blue-700: #1d4ed8;
+  --ViralPik-blue-800: #1e40af;
+  --ViralPik-blue-900: #1e3a8a;
+  --ViralPik-blue-950: #172554;
+  
+  /* Dark mode backgrounds - pure black with surfaces */
+  --ViralPik-dark-bg: #000000;
+  --ViralPik-dark-surface: #0a0a0a;
+  --ViralPik-dark-border: #1a1a1a;
+}
+
+/* Override Gestalt colors for blue theme */
+.gestalt-dark {
+  --color-background-default: var(--ViralPik-dark-bg);
+  --color-background-elevated: var(--ViralPik-dark-surface);
+}
+
+/* Custom scrollbar with blue accent */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ViralPik-dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ViralPik-blue-700);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ViralPik-blue-600);
+}
+
+/* Blue accent for focus states */
+*:focus-visible {
+  outline: 2px solid var(--ViralPik-blue-500);
+  outline-offset: 2px;
+}
+
+/* Blue gradient for special elements */
+.ViralPik-gradient {
+  background: linear-gradient(135deg, var(--ViralPik-blue-600) 0%, var(--ViralPik-blue-400) 100%);
+}
+
+.ViralPik-gradient-text {
+  background: linear-gradient(135deg, var(--ViralPik-blue-400) 0%, var(--ViralPik-blue-600) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Blue glow effect */
+.ViralPik-glow {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+/* Navigation bar with blue tint */
+.ViralPik-nav {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+}
